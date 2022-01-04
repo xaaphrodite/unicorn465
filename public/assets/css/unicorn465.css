@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Sacramento&display=swap");
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.unicorn_465 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.unicorn_465 img {
+    max-width: 317px;
+}
+
+.unicorn_465 h1 {
+    font-family: "Sacramento", monospace;
+    color: #d15788d7;
+    font-size: 3em;
+}
+
+.unicorn_465 h4 {
+    font-family: monospace;
+    opacity: 0.5;
+    margin-top: -15px;
+}
