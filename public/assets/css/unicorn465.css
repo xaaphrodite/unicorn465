@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Sacramento&display=swap");
-
 ::-webkit-scrollbar {
     display: none;
 }
@@ -25,17 +23,5 @@
 }
 
 .unicorn_465 img {
-    max-width: 317px;
-}
-
-.unicorn_465 h1 {
-    font-family: "Sacramento", monospace;
-    color: #d15788d7;
-    font-size: 3em;
-}
-
-.unicorn_465 h4 {
-    font-family: monospace;
-    opacity: 0.5;
-    margin-top: -15px;
+    max-width: 335px;
 }

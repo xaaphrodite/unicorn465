@@ -11,9 +11,7 @@
 
 <body>
     <div class="unicorn_465">
-        <img src="{{ asset('assets/img/unicorn465-bg.png') }}" alt="unicorn465">
-        <h1>unicorn465</h1>
-        <h4>by silentclouds.rest</h4>
+        <img src="{{ asset('assets/svg/unicorn465.svg') }}" alt="unicorn465">
     </div>
 </body>
 
