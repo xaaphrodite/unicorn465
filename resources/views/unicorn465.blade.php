@@ -11,7 +11,7 @@
 
 <body>
     <div class="unicorn_465">
-        <img src="{{ asset('assets/svg/unicorn465.svg') }}" alt="unicorn465">
+        <img src="{{ asset('assets/img/unicorn465-mark.png') }}" alt="unicorn465">
     </div>
 </body>
 
