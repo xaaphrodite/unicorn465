@@ -10,8 +10,10 @@ class CaptchaController extends Controller
 {
     public function Index()
     {
+
         $md5 = md5(uniqid(rand(), true));
         $captcha = substr($md5, 0, 5);
+        Session::forget('unicorn465_captcha_key');
         Session::put('unicorn465_captcha', $captcha);
         return view('unicorn465', compact('captcha'));
     }
@@ -24,9 +26,9 @@ class CaptchaController extends Controller
             Session::forget('unicorn465_captcha');
             Session::put('unicorn465_captcha_key', $unicorn465_captcha);
             Cookie::queue('unicorn465_captcha_key', $unicorn465_captcha, 60);
-            return dd(Cookie::get('unicorn465_captcha_key'));
+            return redirect('/maintenance');
         } else {
-            return redirect('/')->with('unicorn465_captcha_error', 'Bring your eyes closer');
+            return redirect('/')->with('unicorn465_captcha_error', 'Bring your eyes closer.');
         }
     }
 }

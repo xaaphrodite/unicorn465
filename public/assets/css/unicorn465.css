@@ -1,17 +1,67 @@
-::-webkit-scrollbar {
-    display: none;
-}
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f0f0f0;
+}
+
+.unicorn645__card {
+    position: relative;
+    width: 317px;
+    height: 400px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.unicorn645__card span {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: 100;
+}
+
+.unicorn645__card span::before {
+    content: "hidden service";
+    position: absolute;
+    width: 150%;
+    height: 40px;
+    background: #d15688;
+    transform: rotate(-45deg) translateY(-20px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: white;
+    letter-spacing: 0.1em;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    font-family: monospace;
+}
+
+.unicorn645__card span::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    background: red;
+    box-shadow: 140px -140px red;
+    z-index: -1;
 }
 
 .unicorn_465 {
@@ -23,26 +73,31 @@
 }
 
 .unicorn_465 img {
-    max-width: 335px;
+    max-width: 235px;
 }
 
 .captcha__number {
     font-family: monospace;
     position: absolute;
-    margin-top: -52px;
+    margin-top: -45px;
     margin-left: 50px;
-    opacity: 0.58;
+    opacity: 0.5;
     font-size: large;
 }
 
-.captcha__field {
-    width: 243px;
+.captcha__field,
+.captcha__button {
+    width: 100%;
+    margin-bottom: 5px;
 }
-
+.captcha__button {
+    cursor: pointer;
+}
 .error__section {
     font-family: monospace;
     color: #d15688;
     position: absolute;
-    margin-top: 4px;
-    margin-left: -144px;
+    transform: rotate(-90deg);
+    margin-left: -110px;
+    margin-top: -105px;
 }

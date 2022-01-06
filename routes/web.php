@@ -1,7 +1,19 @@
 <?php
 
 use App\Http\Controllers\CaptchaController;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
+
+Route::get('/maintenance', function () {
+  return response()->view('maintenance')->setStatusCode(503);
+})->middleware('captcha');
+
+Route::get('/cleanup', function () {
+  Artisan::call('view:clear');
+  Artisan::call('cache:clear');
+  Artisan::call('optimize:clear');
+  return "done.";
+});
 
 /*
 |--------------------------------------------------------------------------
