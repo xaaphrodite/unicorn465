@@ -25,3 +25,24 @@
 .unicorn_465 img {
     max-width: 335px;
 }
+
+.captcha__number {
+    font-family: monospace;
+    position: absolute;
+    margin-top: -52px;
+    margin-left: 50px;
+    opacity: 0.58;
+    font-size: large;
+}
+
+.captcha__field {
+    width: 243px;
+}
+
+.error__section {
+    font-family: monospace;
+    color: #d15688;
+    position: absolute;
+    margin-top: 4px;
+    margin-left: -144px;
+}

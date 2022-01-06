@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CaptchaController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('unicorn465');
-});
+Route::get('/', [CaptchaController::class, 'Index'])->name('Captcha');
+Route::post('/captcha-compare', [CaptchaController::class, 'Compare'])->name('CaptchaCompare');

@@ -12,6 +12,17 @@
 <body>
     <div class="unicorn_465">
         <img src="{{ asset('assets/img/unicorn465-mark.png') }}" alt="unicorn465">
+        <form action="{{ route('CaptchaCompare') }}" method="POST">
+            @csrf
+            <img src="{{ asset('assets/img/CaptchaBG.JPG') }}" alt="">
+            <br>
+            <p class="captcha__number">{{ $captcha }}</p>
+            <input type="text" class="captcha__field" name="user_captcha" placeholder="CAPTCHA">
+            <input type="submit" name="" id="" value="submit">
+        </form>
+        @if (session()->has('unicorn465_captcha_error'))
+            <span class="error__section">{{ session()->get('unicorn465_captcha_error') }}</span>
+        @endif
     </div>
 </body>
 
